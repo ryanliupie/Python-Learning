@@ -1,0 +1,1 @@
+<img src="/pictures/p1.jpg" alt="DSA-notes" width="800px">
