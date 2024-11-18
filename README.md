@@ -8,4 +8,4 @@
 
 <hr>
 
-- <h2> <a href="DSA.md"> Notes </a> </h2>
+- <h3> <a href="DSA.md"> Notes </a> </h3>
