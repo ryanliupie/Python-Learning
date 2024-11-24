@@ -1,7 +1,7 @@
 # Python Object-Oriented Programming 
 
 class Employee: 
-    pass # this statement tell python to skip it so no error is produced
+    pass # this statement tells python to skip it so no error is produced
 
 emp_1 = Employee() #emp_1 is the instance of the class Employee (object) 
 emp_2 = Employee() #emp_2 is also the instance of the class Employee (object) 
