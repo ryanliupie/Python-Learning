@@ -21,7 +21,7 @@ class Cat:
         self.health = health 
         self.fish = fish 
 
-    def feed(self): # this says, if the cat is not alive, you wont be able to feed it. we raise an exception so that the program does not fail, rather gives feedback
+    def feed(self): #this says, if the cat is not alive, you wont be able to feed it. we raise an exception so that the program does not fail, rather gives feedback
         if not self.alive:
             raise Exception("Cat is dead, you cannot feed it")
             
@@ -34,12 +34,12 @@ class Cat:
 
     def night(self):
         if not self.alive:
-            return # if the cat is not alive, then do nothing 
+            return #if the cat is not alive, then do nothing 
         if self.alive:
-            self.fish > 0 # if the cat is alive, there must be more an o fishes in stomach 
+            self.fish > 0 #if the cat is alive, there must be more an o fishes in stomach 
             self.fish -= 1
         if self.fish <= 0:
-            self.tame = False # if the cat has no fish in stomach, it becomes wild so tame = false 
+            self.tame = False #if the cat has no fish in stomach, it becomes wild so tame = false 
 
     def gift(self):
         if not self.alive:
@@ -47,17 +47,17 @@ class Cat:
         if self.tame: 
             return #if cat is tamed do nothing 
         if self.tame and self.fish > 0:
-            print(f"{self.name}: Left you a gift!") # If the cat is tamed and has more than 0 fish in stomach it will leave a gift 
+            print(f"{self.name}: Left you a gift!") #if the cat is tamed and has more than 0 fish in stomach it will leave a gift 
     
 
     def __str__(self):
         if not self.alive:
-            status = "DEAD" # if the cat is not alive, it is dead 
+            status = "DEAD" #if the cat is not alive, it is dead 
         if self.alive and self.tame == False:
-            status = "WILD" # if the cat is alive and is not tamed, it is wild 
-        if self.alive and not self.tame: # if the cat is alive and tamed, it is tamed 
+            status = "WILD" #if the cat is alive and is not tamed, it is wild 
+        if self.alive and not self.tame: #if the cat is alive and tamed, it is tamed 
             status = "TAMED"
-        return f" Cat {self.name}: Status={status}, Health={self.health}, fish in stomach={self.fish}" # This returns a string representing the objects state 
+        return f" Cat {self.name}: Status={status}, Health={self.health}, fish in stomach={self.fish}" #this returns a string representing the objects state 
 
 
 #Koby = Cat(name ="Koby", tame= False, wild= True, alive = False, dead = True, health= 3, fish = 2)
