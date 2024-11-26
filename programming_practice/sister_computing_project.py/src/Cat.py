@@ -63,3 +63,7 @@ class Cat:
 #Koby = Cat(name ="Koby", tame= False, wild= True, alive = False, dead = True, health= 3, fish = 2)
 #print(Koby.gift())
 #print(Koby)
+
+#koby = Cat(name="koby", tame=False, health=0, alive=False)-- object 1
+#kylo = Cat(name="kylo", tame=True, health=3, fish=2) ------- object 2
+#aiko = Cat(name="aiko", tame=True, health=1, fish=2 ) ------ object 3 
