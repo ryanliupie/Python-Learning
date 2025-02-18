@@ -22,8 +22,8 @@ def getAnswer (answerNumber):
         return 'Very doubtful'
     
 r = random.randint(1,9) # this generates a random variable from 1 to 9 and assigns it the variable r
-fortune = getAnswer(r) 
-print(fortune)
+fortune = getAnswer(r) # this calls the function ans the answerNumber is the parameter where r is the argument we pas through
+print(fortune) # if we want to see the function we called, we can use a print statement 
 
 
 
