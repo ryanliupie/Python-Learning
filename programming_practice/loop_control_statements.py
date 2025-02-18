@@ -9,9 +9,9 @@ while True:
     if name != "":
         break
 
-# So for this, while True expresses that this statement is true and it asks us to input our name
-# If the name is not an empty string, we will break, so this means if we enter a name it will break
-# If we do not enter a string, it will continue looping
+# so for this, while True expresses that this statement is true and it asks us to input our name
+# if the name is not an empty string, we will break, so this means if we enter a name it will break
+# if we do not enter a string, it will continue looping
 
 phone_number = "416-876-2317"
 for i in phone_number:
