@@ -26,11 +26,11 @@ emp_2.pay = 10000 #attribute
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 class Employee: 
-    def __init__(self, first, last, pay): #def __init__ is what kicks off the creation of objects and prepares them with their specific attribute. Without it, we would have to manually assign every attribute to every object. 
-        self.first = first #emp_1.first
-        self.last = last  #emp_1.last
-        self.pay = pay #emp_1.pay 
-        self.email = first + '.' + last + '@gmail.com'
+    def __init__(self, first, last, pay): # def __init__ is a method that lets us set attributes to each object. It is like recipe that tells us how much cookie dough we need for people. # self. binds each attribute to each object. This is like the process of assigning cookie dough to each person.  
+        self.first = first # attribute
+        self.last = last  # attribute
+        self.pay = pay # attribute
+        self.email = first + '.' + last + '@gmail.com' #attribute
 
 emp_1 = Employee('ryan', 'liu', 5000) #in this case, self just refers to the object right. This means we can reuse the code and make as many objects as we want without having to manually print out each attribute every line. Instead we can do it in one line which reduces a lot of code.
 emp_2 = Employee('bob', 'jake', 10000) 
@@ -49,7 +49,7 @@ class Employee:
         self.pay = pay 
         self.email = first + '.' + last + '@gmail.com'
     
-    def fullname(self): #the function or action we want to perform is printing the full name. In the parameter, we need to put self. Remember that self = object. And within that object contains attributes that we need to access in order to perform some type of function and in this case, we are trying to find the full name. So without self, the method/function would not know which objects attributes to use.  
+    def fullname(self): #the function/action/method we want to perform is printing the full name. In the parameter, we need to put self. Remember that self = object. And within that object contains attributes that we need to access in order to perform some type of function and in this case, we are trying to find the full name. So without self, the method/function would not know which objects attributes to use.  
         return f"{self.first} {self.last}" #Remember that 'return' stores the values. In this case, we want to return the first and last name. We F string this because we want to call these attributes when we do decide to print out the full name
 
 emp_1 = Employee('ryan', 'liu', 5000) 
