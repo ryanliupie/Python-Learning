@@ -59,7 +59,7 @@ print(emp_2.raise_amount) #1.04
 
 class Employee:
     num_of_employees = 0 #class variable 
-    raise_amount = 1.04
+    raise_amount = 1.13
     
     def __init__(self, first, last, pay):
         self.first = first 
