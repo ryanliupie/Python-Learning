@@ -24,7 +24,7 @@ emp_1 = Employee('ryan', 'liu', 5000)
 #------------------------------------More efficent way-------------------------------------------------------------------------------------------------------------------
 
 class Employee:
-    raise_amount = 1.04 #this is where we will place the class variable instead of putting it in many locations. This way, we can change this portion of the code and it will change everything else along the way
+    raise_amt = 1.04 #this is where we will place the class variable instead of putting it in many locations. This way, we can change this portion of the code and it will change everything else along the way
     
     def __init__(self, first, last, pay):
         self.first = first 
@@ -45,21 +45,21 @@ emp_2 = Employee('bob', 'james', 3500)
 emp_1.raise_amount = 1.05 #this is where we instead using the the class variable, you create a singular variable for a particular employee
 
 print(emp_1.__dict__) #prints out all everything
-print(emp_1.raise_amount) #1.05
-print(emp_2.raise_amount) #1.04
+print(emp_1.raise_amt) #1.05
+print(emp_2.raise_amt) #1.04
 
 #print(emp_1.pay) -----5000
 #emp_1.apply_raise()---5000  * 1.04   
 #print(emp_1.pay)------5200
 
-#print(Employee.raise_amount)----1.04
-#print(emp_1.raise_amount)-------1.04 
+#print(Employee.raise_amt)----1.04
+#print(emp_1.raise_amt)-------1.04 
 
 #-----------------------------------------Lets say we wanted to keep track of the amount of employees we have-------------------------------------------------------------------
 
 class Employee:
     num_of_employees = 0 #class variable 
-    raise_amount = 1.13
+    raise_amt = 1.13
     
     def __init__(self, first, last, pay):
         self.first = first 
@@ -73,7 +73,7 @@ class Employee:
         return f"{self.first} {self.last} and he makes {self.pay} a month"
 
     def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amount) 
+        self.pay = int(self.pay * self.raise_amt) 
 
 print(Employee.num_of_employees) #initially it will print out 0 
 
