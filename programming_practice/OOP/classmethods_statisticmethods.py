@@ -56,7 +56,7 @@ print(new_emp_1.pay)
 
 #------------------------------------------------------------------------------------------
 
-# static methods do not pass "self" or "cls" as its first argument, rather it behaves like regular a function that relates to the class
+# Static methods do not pass "self" or "cls" as its first argument, rather it behaves like regular a function that relates to the class
 
 class Employee:
     
