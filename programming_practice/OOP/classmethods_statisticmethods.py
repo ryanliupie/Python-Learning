@@ -1,4 +1,5 @@
 # Class methods are not tied to indivdual objects, but it is tied to the class itself. You use it to change something that applies to all objects of that class.
+
 class Employee:
     num_of_employees = 0 
     raise_amt = 1.13
