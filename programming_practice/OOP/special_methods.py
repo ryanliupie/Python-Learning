@@ -1,5 +1,5 @@
 # Special Methods 
-# Simple put "dundar" refers to "double underscores" so any method that has that is a special method
+# Simply put "dundar" refers to "double underscores" so any method that has that is a special method
 
 class Rectangle:
     def __init__(self, width, height): # special method
