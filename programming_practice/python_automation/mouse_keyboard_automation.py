@@ -38,5 +38,3 @@ pyautogui.click(1300, 170, duration = 0.2)
 pyautogui.typewrite("Luka Doncic")
 pyautogui.moveRel(0, 50, duration = 0.5)
 pyautogui.click(0, 0, duration = 0.2) # the problem with this is that it triggers fail-safe mode. The better way to automate web browser is with the use of Selenium
-
-
