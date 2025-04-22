@@ -1,5 +1,5 @@
 # remember that python uses 0 based indexing.
-# # string slicing is like "start at index x, then stop right before y" 
+# string slicing is like "start at index x, then stop right before y" 
 
 # [start : end : step]
 
