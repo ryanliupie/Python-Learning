@@ -48,7 +48,7 @@ for name_match, website_match in zip(names, websites): # zip combines two lists 
 
 # ----findsub() replaces matches----
 
-hidden_text = email_pattern.sub("[Email Hidde]", text) # [] is apart of the string, no meaning, maskes it easier for person to see it as "hidden"
+hidden_text = email_pattern.sub("[Email Hidden]", text) # [] is apart of the string, no meaning, maskes it easier for person to see it as "hidden"
 hidden_text = phone_pattern.sub("[Phone number hidden]", hidden_text) # chained replacement first email then phone. Do one first then the other
 
 print("Hidden texts: \n")
