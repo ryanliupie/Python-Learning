@@ -18,3 +18,18 @@ print(last_4)
 
 reverse = card_number[::-1] # this reverses the entire string
 print(reverse)
+
+# ----------------------------------
+
+email = input("Enter your email: ")
+
+index = email.index("@") # index method where the "@" is for user input
+
+username = email[:index] # instead of counting index, we can simply sub in the index method to print everything before it so it would be the username
+domain = email[index + 1:]
+
+print(index)
+print(username)
+print(domain)
+
+print(f"Your username is {username} and the domain is {domain}")
