@@ -1,7 +1,7 @@
 for e in range(4): # this outer loop executes the inner loop to run 4 times 
     for i in range(1, 10): 
         print(i, end="") # ends all values on the same line 
-    print() # after each loop iteration, "print()" is called to handle the new line, then the outer loop repeatsa 2nd and 3rd time
+    print() # after each loop iteration, "print()" is called to handle the new line, then the outer loop repeats 2nd and 3rd time
 
 
 rows = int(input("Enter the # of rows: "))
