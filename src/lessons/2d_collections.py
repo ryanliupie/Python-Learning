@@ -44,5 +44,5 @@ phone_number = (
 
 for numbers in phone_number:
     for num in numbers: 
-        print(num, end="")
+        print(num, end=" ")
     print()
