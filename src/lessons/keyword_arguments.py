@@ -13,8 +13,10 @@ for i in range (1,11):
 print("1", "2", "3", "4", sep="-")
 
 
-def phone_number(first, second, third):
-    print(first + "-" + second + "-" + third)
+def get_phone(country, area, first, last):
+    return f"{country}-{area}-{first}-{last}"
 
-phone_number(first="123", second="345", third="678")
+phone_number = get_phone(country="Canada", area="ON", first="647", last="5423")
+
+print(phone_number)
 
