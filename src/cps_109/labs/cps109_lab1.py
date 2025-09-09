@@ -12,15 +12,15 @@ c = float(input("Enter a temperature in Celsius: ")) # i used the "float" type s
 f = c * (9/5) + 32
 k = c + 273.15 
 
-print("The temperature in Fahrenheight is", f)
+print("The temperature in Fahrenheit is", f)
 print("The temperature in Kelvin is", k )
 
 
 # Question 2. 
 
-a = float(input("Enter the value of the poloynomical coffecient of 'a': "))
-b = float(input("Enter the value of the poloynomical coffecient of 'b': "))
-c = float(input("Enter the value of the poloynomical coffecient of 'c': "))
+a = float(input("Enter the value of the polynomial coefficient of 'a': "))
+b = float(input("Enter the value of the polynomial coefficient of 'b': "))
+c = float(input("Enter the value of the polynomial coefficient of 'c': "))
 
 
 
