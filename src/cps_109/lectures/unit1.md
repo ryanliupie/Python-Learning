@@ -1,4 +1,4 @@
-## Week 1 
+## Unit 1 
 
 <b>Declarative Knowledge:</b> This is knowing what something is. This can be facts, concepts, and information that can be stated explicitly. For example,  "Toronto is a City in Ontario."
 
