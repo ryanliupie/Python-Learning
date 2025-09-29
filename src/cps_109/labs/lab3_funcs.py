@@ -2,7 +2,7 @@
 # 1) TMU Letter Grade Converter
 # --------------------------------------------------------------
 def lettergrade(pct):
-    if pct < 50:
+    if 0 <= pct < 50:
         return "F"
     
     elif 50 <= pct <= 59: 
@@ -18,7 +18,7 @@ def lettergrade(pct):
         return "A"
     
     else: 
-        print("You did not enter the correct value. Please try again.")
+        return None
     
         
     '''
@@ -45,6 +45,17 @@ def lettergrade(pct):
 # 2) Duplicate Sequence Elements
 # --------------------------------------------------------------
 def duplicates(items):
+    if len(items) != 3: 
+        return "invalid input"
+    
+    elif len(set(items)) == 1: 
+        return "three-of-a-kind"
+    
+    elif len(set(items)) == 2: 
+        return "two-of-a-kind"
+    
+    elif len(set(items)) == 3: 
+        return "one-of-a-kind"
 
     '''
     Assume that parameter 'items' is a sequence. Return a 
@@ -74,15 +85,29 @@ def duplicates(items):
 
     '''
 
-    pass # replace 'pass' with a return statement.
+     # replace 'pass' with a return statement.
     
     
 # --------------------------------------------------------------
 # 3) Inversions of Three
 # --------------------------------------------------------------
 def inversions(items):
+    if len(items) != 3: 
+        return -1
     
+    if len(items) == 3: 
+        counter = 0 
+        if items[0] > items[1]:
+            counter += 1
 
+        if items[0] > items[2]: 
+            counter += 1
+        
+        if items[1] > items[2]:
+            counter += 1 
+            
+        return counter 
+                 
     '''
     Like the previous question, you may assume 'items' 
     is a sequence. Also like the previous question, it should
@@ -129,14 +154,29 @@ def inversions(items):
     
     '''
 
-    pass # replace 'pass' with a return statement.    
+     # replace 'pass' with a return statement.    
     
     
 # --------------------------------------------------------------
 # 4) Increasing, Strictly or Otherwise?
 # --------------------------------------------------------------   
-def increasing(items, strict):   
+def increasing(items, strict: bool):
+    if len(items) != 3: 
+        return "invalid input"
     
+    if type(strict) is not bool: 
+        return "invalid input"
+    
+    if strict == True: 
+        if items[0] < items[1] and items[1] < items[2]:
+            return True 
+        return False
+                 
+    if strict == False:
+        if items[0] <= items[1] and items[1] <= items[2]:
+            return True
+        return False
+                
     '''
     Once more, assume items is a sequence. The second parameter,
     'strict', is boolean (True or False)
@@ -167,13 +207,34 @@ def increasing(items, strict):
     LOOPING IS NOT REQUIRED TO SOLVE THIS PROBLEM!
     '''
     
-    pass # replace 'pass' with a return statement.
+     # replace 'pass' with a return statement.
    
    
 # --------------------------------------------------------------
 # 5) Python as a Calculator 
 # --------------------------------------------------------------      
-def calculator(op1, op2, operator):     
+def calculator(op1, op2, operator): 
+    if operator == "+": 
+        return op1 + op2
+    
+    elif operator == "-": 
+        return op1 - op2 
+    
+    elif operator == "*": 
+        return op1 * op2
+    
+    elif operator == "/": 
+        try:  
+            return op1 / op2
+        except ZeroDivisionError:
+            return None   
+          
+    if operator == "**": 
+        return op1 ** op2
+    
+    else:
+        return None
+    
     
     '''
     This function accepts three arguments:
@@ -197,7 +258,7 @@ def calculator(op1, op2, operator):
     would be a division by zero, return None.
     '''
     
-    pass # replace 'pass' with a return statement.
+     # replace 'pass' with a return statement.
     
     
         
