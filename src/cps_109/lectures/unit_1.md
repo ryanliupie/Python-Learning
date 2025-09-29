@@ -42,9 +42,9 @@ Once a statement is syntactically correct and passes static semantic checks, the
 <hr>
 <u><b> Review of Operations</b></u>
 
-- <u> a + b:</u> the sum
-- <u> a - b:</u> the difference
-- <u> a * b:</u> the product
+- `a + b:` the sum
+- `a - b:` the difference
+- `a * b:`the product
 - <u> a / b:</u> division
 - <u> a // b:</u> int division (result is a whole number excluding the remainder)
 - <u> a % b:</u> modulo (gives remainder after operation)
