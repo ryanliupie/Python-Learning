@@ -2,7 +2,7 @@
 # 1) Summing Evens
 # --------------------------------------------------------------
 def sumeven(n):
-    
+     
     '''
     This function should calculate and return the sum of the 
     first n even numbers, where n >= 0. Note that 0 is even.
@@ -18,12 +18,20 @@ def sumeven(n):
     different way of producing the first n even integers. Or, 
     just maybe, you can come up with a way to solve this 
     without writing a loop at all?
-    
+
     '''
 
-    pass # replace 'pass' with a return statement.
+    if n >= 0:
+         even_num = []
+         counter = 0 
+         for i in range(0, n * 2, 2): 
+              even_num.append(i)
 
-
+         for num in even_num:
+              counter = counter + num 
+         return counter
+    
+     
 # --------------------------------------------------------------
 # 2) Summing Squares
 # --------------------------------------------------------------
@@ -45,7 +53,16 @@ def sumsquares(n):
 
     '''
 
-    pass # replace 'pass' with a return statement.
+    if n >= 0: 
+        sum_squares = []
+        counter = 0 
+
+        for i in range(1, n + 1):
+            sum_squares.append(i)
+
+        for num in sum_squares:
+            counter = counter + (num ** 2)
+        return counter
 
 
 # --------------------------------------------------------------
@@ -70,7 +87,18 @@ def odddigitsum(num):
     
     '''
 
-    pass # replace 'pass' with a return statement.    
+    initial_list = []
+    counter = 0
+    num = abs(num)
+    numbers = str(num)
+    for n in numbers: 
+        initial_list.append(n)
+    
+    for s in initial_list: 
+        integer = int(s)
+        if not integer % 2 == 0: 
+            counter = counter + integer
+    return counter  
     
     
 # --------------------------------------------------------------
@@ -94,7 +122,11 @@ def listexponential(n, base):
    
     '''
 
-    pass # replace 'pass' with a return statement. 
+    exponential = []
+    for i in range(0, n):
+        res = base ** i
+        exponential.append(res)
+    return exponential 
     
     
 # --------------------------------------------------------------
@@ -116,7 +148,17 @@ def digitcat(s):
 
     '''
 
-    pass # replace 'pass' with a return statement.
+    digit_list = []
+    for char in s: 
+        if char.isdigit(): 
+            digit_list.append(char)
+
+    if digit_list == []:
+        return None 
+        
+    join_string = "".join(digit_list)
+    result = int(join_string)
+    return result
     
     
 # --------------------------------------------------------------
@@ -142,7 +184,13 @@ def stringtofloatlist(fltstr):
     
     '''
 
-    pass # replace 'pass' with a return statement.
+    float_list = []
+    x = fltstr.split(",")
+
+    for char in x: 
+          float_num = float(char)
+          float_list.append(float_num)
+    return float_list
 
     
 # --------------------------------------------------------------
@@ -182,7 +230,38 @@ def maxbytype(items):
 
     '''
 
-    pass # replace 'pass' with a return statement.
+    int_list = []
+    float_list = []
+    str_list = []
+
+    for char in items: 
+        if type(char) == int:
+            int_list.append(char)
+
+        if type(char) == float: 
+            float_list.append(char)
+
+        if type(char) == str: 
+            str_list.append(char)
+    
+    if not int_list == []: 
+        max_int = max(int_list)
+    else: 
+        max_int = None
+
+    if not float_list == []: 
+        max_float = max(float_list)
+    else: 
+        max_float = None
+    
+    if not str_list == []: 
+        max_str = max(str_list)
+    else: 
+        max_str = None 
+    
+    result = tuple((max_int, max_float, max_str))
+    return result
+    
     
 
     
