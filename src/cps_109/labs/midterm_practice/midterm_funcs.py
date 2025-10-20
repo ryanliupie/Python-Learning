@@ -38,7 +38,28 @@ def roman_to_arabic(rn):
     X    = 10
     '''
     
-    pass 
+    if rn == "I": 
+        return 1 
+    elif rn == "II": 
+        return 2 
+    elif rn == "III": 
+        return 3 
+    elif rn == "IV": 
+        return 4 
+    elif rn == "V": 
+        return 5
+    elif rn == "VI": 
+        return 6 
+    elif rn == "VII": 
+        return 7 
+    elif rn == "VIII": 
+        return 8 
+    elif rn == "IX": 
+        return 9 
+    elif rn == "X": 
+        return 10 
+    else: 
+        "Please try again"
 
 
 # Q2)
@@ -48,8 +69,15 @@ def sum_even(n):
     Return the sum of the integers, between 1-n inclusive, 
     that are even
     '''
+
+    sum_list = []
+    for num in range(1, n+1): 
+        if num % 2 == 0: 
+            sum_list.append(num)
+
+    return sum(sum_list)
     
-    pass
+    
 
 
 # Q3)
@@ -61,9 +89,19 @@ def integers_exceed(n):
     and therefore the answer is 5.
     '''
 
-    pass
+    counter = 0 
+    total_sum = 0 
 
+    for num in range(1, n + 1): 
+        if total_sum > n: 
+            return counter 
+        else: 
+            total_sum = total_sum + num 
+            counter += 1 
+    
+    return counter  
 
+        
 # Q4)
 def pyramid_blocks(n, m):
     '''
