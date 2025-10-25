@@ -38,28 +38,20 @@ def roman_to_arabic(rn):
     X    = 10
     '''
     
-    if rn == "I": 
-        return 1 
-    elif rn == "II": 
-        return 2 
-    elif rn == "III": 
-        return 3 
-    elif rn == "IV": 
-        return 4 
-    elif rn == "V": 
-        return 5
-    elif rn == "VI": 
-        return 6 
-    elif rn == "VII": 
-        return 7 
-    elif rn == "VIII": 
-        return 8 
-    elif rn == "IX": 
-        return 9 
-    elif rn == "X": 
-        return 10 
-    else: 
-        "Please try again"
+    dict1 = {"I": 1,  
+            "II": 2,  
+            "III": 3,  
+            "IV": 4,  
+            "V": 5,  
+            "VI": 6,  
+            "VII": 7,  
+            "VIII": 8,  
+            "IX": 9,  
+            "X": 10 
+        }
+    
+    if rn in dict1.keys():
+        return dict1[rn]
 
 
 # Q2)
@@ -91,15 +83,15 @@ def integers_exceed(n):
 
     counter = 0 
     total_sum = 0 
+    num = 1 
 
-    for num in range(1, n + 1): 
-        if total_sum > n: 
-            return counter 
-        else: 
-            total_sum = total_sum + num 
-            counter += 1 
+    while total_sum <= n: 
+        total_sum += num
+        counter += 1
+        num += 1 
     
-    return counter  
+    return counter 
+ 
 
         
 # Q4)
@@ -112,7 +104,15 @@ def pyramid_blocks(n, m):
     reaches 1 first. Assume n and m are integers. Return the number 
     of blocks in the pyramid.
     '''
-    pass # replace 'pass' with a return statement.
+    counter = 0 
+    
+    while n > 0 and m > 0: 
+        x = n * m 
+        counter += x 
+        n = n - 1 
+        m = m - 1 
+    
+    return counter 
 
 
 # Q5)
@@ -126,7 +126,24 @@ def first_letter(digits):
     Similarly, '0123456789613' returns 'zottffssensot'.
     '''
 
-    pass
+    new_str = ""
+    dict1 = {"0": "z",
+             "1": "o", 
+             "2": "t", 
+             "3": "t",
+             "4": "f", 
+             "5": "f", 
+             "6": "s", 
+             "7": "s",
+             "8": "e", 
+             "9": "n"
+             }
+    
+    for num in digits:
+        if num in dict1.keys(): 
+            new_str = new_str + dict1[num]
+    
+    return new_str
 
 
 # Q6) 
@@ -138,7 +155,16 @@ def deduplicate(s):
     since it changes the 'ee' to 'e'.
     'boomboomeeraaang' returns 'bombomerang' .
     '''
-    pass # replace 'pass' with a return statement.
+    new_str = ""
+    
+    if s == "": 
+        return s
+    
+    for i in range(len(s) - 1):
+        if s[i] != s[i+1]: 
+            new_str += s[i]
+                
+    return new_str + s[-1]
 
 
 
