@@ -69,7 +69,17 @@ def two_summers(items, target):
 
     '''
 
-    pass # replace 'pass' with a return statement.
+    left = 0 
+    right = len(items) - 1
+
+    while left < right:
+        result = items[left] + items[right] 
+        if result == target: 
+            return tuple((items[left], items[right]))
+        elif result < target: 
+            left += 1 
+        else: 
+            right -= 1 
 
 
 # --------------------------------------------------------------
