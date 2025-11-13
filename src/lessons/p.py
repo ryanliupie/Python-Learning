@@ -1,15 +1,28 @@
-def two_summers(items, target):
-    left = 0 
-    right = len(items) - 1
+def is_cyclops(n):
+    new_list = []
+    counter = 0 
+    positive_nums = abs(n)
+    str_n = str(positive_nums)
+    if len(str_n) % 2 == 0: 
+        return False
+    else: 
+        for char in str_n: 
+            new_list.append(char)
+        for num in str_n: 
+            if num == "0": 
+                counter+= 1 
 
-    while left < right:
-        result = items[left] + items[right] 
-        if result == target: 
-            return tuple((items[left], items[right]))
-        elif result < target: 
-            left += 1 
+        if counter > 1: 
+            return False
         else: 
-            right -= 1 
+            mid = len(str_n) // 2
+            if str_n[mid] == "0": 
+                return True
+            return False
 
-print(two_summers([1, 2, 3, 4, 5], 7))
+
         
+
+    
+
+print(is_cyclops(675409821))

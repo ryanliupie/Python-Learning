@@ -135,5 +135,13 @@ def nested_reverse(items):
 
     '''
 
-    pass # replace 'pass' with a return statement.
+    if items == []: 
+        return []
+    else: 
+        last_element = items[-1]
+
+        if type(last_element) == list: 
+            last_element = nested_reverse(last_element)
+        rev = nested_reverse(items[:-1])
+        return [last_element] + rev
 
