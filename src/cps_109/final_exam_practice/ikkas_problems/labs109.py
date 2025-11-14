@@ -93,7 +93,8 @@ print(only_odd_digits(0))
 
 #---------------------------------------------------------------
 
-new_list = []
+def is_cyclops(n):
+    new_list = []
     counter = 0 
     positive_nums = abs(n)
     str_n = str(positive_nums)
