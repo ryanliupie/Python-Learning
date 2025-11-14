@@ -119,6 +119,9 @@ def is_cyclops(n):
         
 def domino_cycle(tiles): 
     counter = 0 
+    if tiles  == []: 
+        return True 
+    
     for i in range(len(tiles) - 1): 
         if tiles[i][1] == tiles[i+1][0]: 
              counter += 1
