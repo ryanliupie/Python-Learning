@@ -114,3 +114,23 @@ def is_cyclops(n):
             if str_n[mid] == "0": 
                 return True
             return False
+        
+#---------------------------------------------------------------
+        
+def domino_cycle(tiles): 
+    counter = 0 
+    for i in range(len(tiles) - 1): 
+        if tiles[i][1] == tiles[i+1][0]: 
+             counter += 1
+        
+    
+    if tiles[-1][-1] == tiles[0][0]: 
+            counter += 1
+    
+
+    if counter == len(tiles): 
+         return True
+    return False
+
+            
+print(domino_cycle([(3, 5), (5, 2), (2, 4)]))

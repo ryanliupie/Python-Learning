@@ -1,5 +1,7 @@
-list1 = ["1", "4", "0", "4", "5"]
+n = "1934567"
+new_list = []
 
-for i in range(len(list1)): 
-    mid = len(list1) // 2
-print(list1[mid])
+for char in n: 
+    new_list.append(char)
+
+print(new_list[1])
