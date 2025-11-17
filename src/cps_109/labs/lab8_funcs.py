@@ -95,7 +95,7 @@ def max_pop(items):
 # 3) Product by index
 # --------------------------------------------------------------
 
-def product_by_index(items, ids) :
+def product_by_index(items, ids):
     '''
     Assume items is a list of numbers.
     Assume ids is a list of integers.
@@ -118,14 +118,25 @@ def product_by_index(items, ids) :
 
     '''
 
-    pass # replace 'pass' with a return statement.
+    if not items or not ids: 
+        return None 
+    
+    result = 1 
+    for id in ids: 
+        try: 
+            result *= items[id]
+    
+        except IndexError:  
+            return None
+    
+    return result 
 
 
 # --------------------------------------------------------------
 # 4) Coin counter
 # --------------------------------------------------------------
 
-def coins(s) :
+def coins(s):
     '''
     Assume s is a string representing coins, where q is for 
     quarter, p is for penny, d is for dime, and n is for nickel.
@@ -141,9 +152,22 @@ def coins(s) :
     money('43') raises ValueError
 
     '''
+    counter = 0 
+    dict1 = {"q": 25, 
+              "p": 1, 
+              "d": 10, 
+              "n": 5
+             }
+      
 
-    pass # replace 'pass' with a return statement.
+    for char in s:
+        if char not in dict1.keys(): 
+            raise ValueError 
+        counter += dict1[char]
+    return counter
 
+
+ 
 
 # --------------------------------------------------------------
 # 5) Name checker
@@ -163,8 +187,23 @@ def check_name(first, last):
 
     If either name is not valid, raise a ValueError exception.
     '''
+     
+    if not first[0].isupper(): 
+        raise ValueError
+        
+    for char in first[1:]: 
+        if not char.islower():
+            raise ValueError
+    
+    if not last[0].isupper(): 
+        raise ValueError
+    
+    for char in last[1:]: 
+        if not char.islower(): 
+            raise ValueError
+    
+    return last + "," + " " + first
 
-    pass # replace 'pass' with a return statement.
 
 
 # --------------------------------------------------------------
@@ -185,6 +224,15 @@ def get_next_int(it):
     to catch the StopIteration error when it occurs. 
 
     '''
-
-    pass # replace 'pass' with a return statement.
+    
+    while True: 
+        try: 
+            num = next(it)
+        except StopIteration:
+            return None
+        
+        if isinstance(num, int): 
+            return num
+    
+    
 
