@@ -137,3 +137,44 @@ def domino_cycle(tiles):
 
             
 print(domino_cycle([(3, 5), (5, 2), (2, 4)]))
+
+
+#---------------------------------------------------------------
+
+"""def count_dominators(items):
+    counter = 0
+    
+    for i in range(len(items)):
+        j = i + 1 
+        
+        while j < len(items): 
+            if items[j] >= items[i]:
+                break 
+            j += 1 
+            
+        if j == len(items): 
+            counter += 1 
+            
+    return counter
+"""
+#---------------------------------------------------------------
+
+def extract_increasing(digits):
+    list1 = []
+    previous = -1 
+    current = 0 
+    
+    for char in digits: 
+        int_char = int(char)
+        current = 10 * current + int_char # 10 * 0 + 3 = 3 
+    
+        if current > previous: 
+            list1.append(current)
+            previous = current 
+            current = 0 
+    
+    return list1
+        
+    
+print(extract_increasing("345349"))
+
