@@ -136,7 +136,7 @@ def domino_cycle(tiles):
     return False
 
             
-print(domino_cycle([(3, 5), (5, 2), (2, 4)]))
+print(domino_cycle([(3, 5), (5, 2), (2, 4)]))   
 
 
 #---------------------------------------------------------------
