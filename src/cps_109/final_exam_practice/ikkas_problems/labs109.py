@@ -178,3 +178,19 @@ def extract_increasing(digits):
     
 print(extract_increasing("345349"))
 
+#---------------------------------------------------------------
+
+def give_change(amount, coins): 
+    result = []
+    remaining = amount 
+    
+    for coin in coins: 
+        while remaining >= coin: 
+            result.append(coin)
+            remaining -= coin 
+    
+    return result
+    
+        
+print(give_change(64, [50, 25, 10, 5, 1]))
+
