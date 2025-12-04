@@ -49,8 +49,20 @@ def step_prod(n, k, step):
 
     If any are <= 0, raise ValueError.
     '''
-    pass
-
+    if type(n) != int or type(k) != int or type(step) != int:
+        raise TypeError
+    elif n <= 0 or k <= 0 or step <=0: 
+        raise ValueError
+    else:
+        current = n 
+        result = 1
+        for num in range(k): 
+            result = current * result
+            current = current - step 
+        return result 
+    
+print(step_prod(7, 3, 1))
+        
 
 # --------------------------------------------------------------
 # Q3) Iteration (back to earlier weeks)
@@ -73,8 +85,19 @@ def num_subs(n):
 
     '''
 
-    pass # replace this with a return statement
+    counter  = 0 
+    num = 1 
+    iteration = 0 
+    
+    while (counter>=0): 
+        res = n - num 
+        counter = res 
+        n = counter 
+        num += 1 
+        iteration += 1 
+    return iteration
 
+print(num_subs(12))
 
 # --------------------------------------------------------------
 # Q4) Another one on iteration
