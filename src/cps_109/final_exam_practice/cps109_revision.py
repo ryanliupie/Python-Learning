@@ -120,9 +120,18 @@ def num_halves(n):
 
     Return the number of divisions.
     '''
-    pass  # replace this with a return statement
+    counter = 0 
+    update_num = n
+    
+    while (update_num >= 1):
+        result = update_num / 2 
+        counter += 1 
+        update_num = result 
+    
+    return counter 
 
-
+print(num_halves(20))
+    
 # --------------------------------------------------------------
 # Q5) Lists (a bit more complex)
 # --------------------------------------------------------------
@@ -148,7 +157,24 @@ def run_lengths(items):
     So you should return:
     [(1, 3), (2, 1), (4, 2), (5, 4), (9, 1)]
     '''
-    pass  # replace this with a return statement
+    
+    list1 = []
+    count = 1 
+    current_value = items[0]
+    
+    for i in range(1, len(items)): 
+        if current_value == items[i]: 
+            count += 1 
+        else: 
+            list1.append((current_value, count))
+            current_value = items[i]
+            count = 1 
+            
+    list1.append((current_value, count))
+    return list1
+    
+print(run_lengths([1, 1, 1, 2, 4, 4, 5, 5, 5, 5, 9]))
+    
 
 # --------------------------------------------------------------
 # Q6) Strings (a bit more complex and similar to the question above)
@@ -196,7 +222,12 @@ def int_list_dict(items):
     If items is empty, return an empty dictionary.
 
     '''
-    pass  # replace this with a return statement
+    new_dict = {}
+    for num in items: 
+        new_dict[num] = new_dict.get(num, 0) + 1 
+    return new_dict
+
+print(int_list_dict([1, 2, 2, 7, 3, 7, 3, 7]))
 
 # --------------------------------------------------------------
 # Q8) Dictionary (a bit more complex and similar to the question above)
@@ -211,8 +242,16 @@ def digit_dict(n):
     would be { 1:1, 2:2, 7:3, 3:2 }    
     
     '''
+    str_type = str(n)
+    new_dict = dict()
+    
+    for num in str_type:
+        digit = int(num)
+        new_dict[digit] = new_dict.get(digit, 0) + 1 
+    return new_dict
+    
 
-    pass # replace this with a return statement
+print(digit_dict(12273737))
 
 # --------------------------------------------------------------
 # Q9) Recursion (see more examples in the videos)
