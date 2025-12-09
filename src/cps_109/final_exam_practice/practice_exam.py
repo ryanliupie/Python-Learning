@@ -36,7 +36,27 @@ def to_binary(n):
 
     Hint: Repeatedly divide by 2 and collect remainders.
     '''
-    # your code here
+    list1 = []
+    new_str = ""
+    current = n 
+    
+    if n == 0: 
+        return "0" 
+    
+    while (current>=1): 
+        result = current // 2 
+        remainder_holder = current % 2 
+        list1.append(remainder_holder)
+        current = result
+        
+    str_list = list1[::-1]  
+    
+    for num in str_list: 
+        new_str = new_str + str(num)
+    
+    return new_str
+
+print(to_binary(0))
 
 # 2) 
 def sum_diff_merge(a, b):
@@ -68,7 +88,14 @@ def sum_diff_merge(a, b):
         [2, 5, 5, 5, 7, 8, 9, 13]
 
     '''
-    # your code here
+    list1 = []
+    for i in range(len(a)):
+        res1 = a[i] + b[i]
+        list1.append(res1)
+        res2 = abs(a[i] - b[i])
+        list1.append(res2)
+
+    return sorted(list1)
 
 
 # 3) 
@@ -122,7 +149,30 @@ def row_col_sums(mat):
         ([6, 15], [5, 7, 9])
 
     '''
-    # your code here
+    first_list = []
+    second_list = []
+    row_sums = []
+    
+    for num in mat[0]: 
+        first_list.append(num)
+    
+    for num in mat[1]: 
+        second_list.append(num)
+    
+    result1 = sum(first_list)
+    result2 = sum(second_list)
+        
+    row_sums.append(result1)
+    row_sums.append(result2)
+    #-------------------------------
+    col_sums = []
+    
+    for i in range(len(first_list)): 
+        res = first_list[i] + second_list[i]
+        col_sums.append(res)
+    
+    final = tuple((row_sums, col_sums))
+    return final
 
 
 
