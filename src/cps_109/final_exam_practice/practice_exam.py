@@ -222,7 +222,12 @@ def safe_int_divide(a, b):
     - You must use explicit type checking.
     - Do not print anything.
     '''
-    # your code here
+    if type(a) != int or type(b) != int: 
+        raise TypeError
+    elif b == 0: 
+        raise ValueError
+    else: 
+        return a // b
 
    
 
