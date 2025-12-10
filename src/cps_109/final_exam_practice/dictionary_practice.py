@@ -4,7 +4,8 @@ def count(nums):
     so the key = number and the values = how many times it occurs. 
     
     input: nums = [1, 2, 2, 3, 1, 2]
-    ouput: {1: 2, 2: 3, 3: 1}
+
+    output: {1: 2, 2: 3, 3: 1}
 
     """
     dict1 = dict()
@@ -20,10 +21,11 @@ def group(words):
     Take a list of words and group it by their first letter. 
     
     input: words = ["apple", "air", "banana", "book", "cat", "car"]
+
     output: {
-        "a": ["air", "apple"],
-        "b": ["banana", "book"],
-        "c": ["car", "cat"]
+            "a": ["air", "apple"],
+            "b": ["banana", "book"],
+            "c": ["car", "cat"]
             }
     """
     dict2 = {}
@@ -49,10 +51,11 @@ def count_word(words):
     are equal to that length. 
     
     input: words = ["hi", "dog", "cat", "yes", "a", "no"]
-    ouput: {
-        1: 1,   # "a"
-        2: 2,   # "hi", "no"
-        3: 3    # "dog", "cat", "yes"
+    
+    output: {
+             1: 1,   # "a"
+            2: 2,   # "hi", "no"
+            3: 3    # "dog", "cat", "yes"
            }
 
     """
@@ -67,7 +70,40 @@ print(count_word(["hi", "dog", "cat", "yes", "a", "no"]))
         
 #-------------------------------------------------------------------
 
+def count2(words):
 
+    """
+    "Group Anagrams". take a list of words
+    and group aall words that are angrams 
+    of each other. 
+
+    input: words = ["eat", "tea", "ate", "bat", "tab", "tan", "nat"]
+
+    output: {
+            "aet": ["ate", "eat", "tea"],
+            "abt": ["bat", "tab"],
+            "ant": ["nat", "tan"]
+            }
+
+    """
+    dict1 = dict()
+    for word in words: 
+        x = sorted(word)
+        y = "".join(x)
+        
+        if y not in dict1: 
+            dict1[y] = []
+        dict1[y].append(word)
+        
+    for key in dict1.keys(): 
+        dict1[key] = sorted(dict1[key])
+    
+    return dict1
+    
+    
+    
+
+print(count2(["eat", "tea", "ate", "bat", "tab", "tan", "nat"]))
         
         
         

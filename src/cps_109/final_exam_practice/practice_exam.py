@@ -197,7 +197,16 @@ def invert_dict(d):
 
    
     '''
-    # your code here
+    dict1 = {}
+    for key, value in d.items(): 
+        if value not in dict1: 
+            dict1[value] = []
+        dict1[value].append(key)
+    
+    
+    for key in dict1.keys():  
+        dict1[key] = sorted(dict1[key])
+    return dict1
 
 
 # 6)
