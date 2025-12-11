@@ -149,27 +149,17 @@ def row_col_sums(mat):
         ([6, 15], [5, 7, 9])
 
     '''
-    first_list = []
-    second_list = []
     row_sums = []
+    for i in range(len(mat)):
+        row_sums.append(sum(mat[i]))
     
-    for num in mat[0]: 
-        first_list.append(num)
-    
-    for num in mat[1]: 
-        second_list.append(num)
-    
-    result1 = sum(first_list)
-    result2 = sum(second_list)
-        
-    row_sums.append(result1)
-    row_sums.append(result2)
-    #-------------------------------
     col_sums = []
     
-    for i in range(len(first_list)): 
-        res = first_list[i] + second_list[i]
-        col_sums.append(res)
+    for i in range(len(mat[0])):
+        counter = 0 
+        for j in range(len(mat)):
+            counter += mat[j][i]
+        col_sums.append(counter)
     
     final = tuple((row_sums, col_sums))
     return final
@@ -207,7 +197,7 @@ def invert_dict(d):
     for key in dict1.keys():  
         dict1[key] = sorted(dict1[key])
     return dict1
-
+  
 
 # 6)
 def safe_int_divide(a, b):

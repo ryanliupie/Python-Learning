@@ -1,4 +1,16 @@
-s = ["1", "2", "3"]
+n = ["12345"]
+new_list = []
+counter = 0 
 
-t = "".join(s)
-print(t)
+for i in n: 
+    for num in str(i):
+        new_list.append(num)
+print(new_list)
+    
+    
+print(counter)
+    
+
+    
+
+        
