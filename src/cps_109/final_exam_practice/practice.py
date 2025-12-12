@@ -1,9 +1,11 @@
-nums = [100, 0, 5, 3, 4]
+n = "32145dfbhge467fgdhj"
 
-res = nums.pop(0)
+list1 = []
+for char in n:
+    if char.isalpha(): 
+        list1.append(char)        
+        
+r = "".join(list1)
 
-print(nums)
-    
-    
-
+print(r)
         

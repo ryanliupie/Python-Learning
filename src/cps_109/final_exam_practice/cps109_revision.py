@@ -202,7 +202,23 @@ def alpha_blocks(s):
     Return:
     [("abc", 0, 2), ("de", 5, 6), ("fgh", 8, 10)]
     '''
-    pass
+    block = []
+    current = ""
+    start = 0
+    for i in range(len(s)): 
+        if s[i].isalpha(): 
+            if current == "": 
+                start = i
+            current += s[i]
+        else: 
+            if current != "": 
+                block.append((current, start, i-1))
+            current = ""
+    
+    if current != "": 
+        block.append((current, start, len(s) - 1))
+    
+    return block
 
 # --------------------------------------------------------------
 # Q7) Dictionary (similar to the question above but we are using a dictionary to return)
