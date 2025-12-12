@@ -1,16 +1,9 @@
-n = ["12345"]
-new_list = []
-counter = 0 
+nums = [100, 0, 5, 3, 4]
 
-for i in n: 
-    for num in str(i):
-        new_list.append(num)
-print(new_list)
-    
-    
-print(counter)
-    
+res = nums.pop(0)
 
+print(nums)
+    
     
 
         
