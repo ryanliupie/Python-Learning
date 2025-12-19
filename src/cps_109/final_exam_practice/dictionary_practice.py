@@ -74,7 +74,7 @@ def count2(words):
 
     """
     "Group Anagrams". take a list of words
-    and group aall words that are angrams 
+    and group all words that are anagrams 
     of each other. 
 
     input: words = ["eat", "tea", "ate", "bat", "tab", "tan", "nat"]
