@@ -10,4 +10,3 @@ def GroupAnagrams(strs):
 
 
 print(GroupAnagrams(["act","pots","tops","cat","stop","hat"])) 
-    
