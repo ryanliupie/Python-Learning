@@ -6,7 +6,4 @@ def GroupAnagrams(strs):
     
     return list(hashmap.values())
 
-    
-
-
 print(GroupAnagrams(["act","pots","tops","cat","stop","hat"])) 

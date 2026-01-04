@@ -4,4 +4,5 @@ def ValidAnagram(s, t):
     if sort1 == sort2: 
         return True
     return False
+
 print(ValidAnagram("racecar", "carrace"))
