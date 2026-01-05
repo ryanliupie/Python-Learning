@@ -1,13 +1,6 @@
-def GroupAnagrams(strs):
-    hashmap = {}
-    for word in strs: 
-        key = tuple(sorted(word))
-        hashmap[key] = hashmap.get(key, []) + [word]
-    
-    return list(hashmap.values())
+list1 = [1,2,3,4,5,6,7]
 
-    
+for i in range(len(list1)): 
+    print(i)
 
-
-print(GroupAnagrams(["act","pots","tops","cat","stop","hat"])) 
     
