@@ -1,3 +1,6 @@
-l1 = ["Hello", "Ryan"]
+dict1 = {"hello": 5, 
+        "Zahra": 7  
+        }
 
-print(l1[::-1])
+for key, value in dict1.values(): 
+    print(key)
