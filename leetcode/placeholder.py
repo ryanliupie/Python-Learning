@@ -1,6 +1,7 @@
-dict1 = {"hello": 5, 
-        "Zahra": 7  
-        }
+nums = [1,2,3,4,5,6,7]
+k = 3 
 
-for key, value in dict1.values(): 
-    print(key)
+for i in range(len(nums) - k): 
+    print(nums[i])
+    
+
