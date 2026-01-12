@@ -1,23 +1,23 @@
-def twoSum(numbers, target):
-    l = 0 
-    r = len(numbers) - 1
+s = "([{}])"
 
-    while (l < r): 
-        current_sum = numbers[l] + numbers[r]
+list1 = []
 
-        if current_sum > target: 
-            r -= 1 
+for c in s:
+    list1.append(c)
 
-        elif current_sum < target: 
-            l += 1 
-        
-        else: 
-            if current_sum == target: 
-                return [l + 1, r + 1]
-            
-
-     
+l = 0 
+r = len(list1) - 1 
 
 
 
-print(twoSum([1,2,3,4], 3)) 
+while (l < r):
+    if list1[l] == list1[r]: 
+        l += 1 
+        r -= 1 
+    else: 
+        print(False)
+    
+
+print(True)
+
+
