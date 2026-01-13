@@ -1,23 +1,14 @@
-s = "([{}])"
+def groupAnagrams(strs): 
+    dict1 = dict()
 
-list1 = []
+    for word in strs: 
+        key = tuple(sorted(word))
+        
+        if key not in dict1: 
+            dict1[key] = []
+        dict1[key].append(word)
 
-for c in s:
-    list1.append(c)
+    return list(dict1.values())
 
-l = 0 
-r = len(list1) - 1 
-
-
-
-while (l < r):
-    if list1[l] == list1[r]: 
-        l += 1 
-        r -= 1 
-    else: 
-        print(False)
-    
-
-print(True)
-
+print(groupAnagrams(["act","pots","tops","cat","stop","hat"]))
 

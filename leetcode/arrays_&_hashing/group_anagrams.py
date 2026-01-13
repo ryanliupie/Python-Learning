@@ -2,7 +2,10 @@ def GroupAnagrams(strs):
     hashmap = {}
     for word in strs: 
         key = tuple(sorted(word))
-        hashmap[key] = hashmap.get(key, []) + [word]
+        
+        if key not in hashmap: 
+            hashmap[key] = []
+        hashmap[key].append(word)
     
     return list(hashmap.values())
 
