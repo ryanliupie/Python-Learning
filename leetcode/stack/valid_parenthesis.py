@@ -17,7 +17,7 @@ def isValid(s):
         
         else: 
             if not stack: # same as "if stack == []"
-                return False # if there are not current opening brackets in the stack, we simply return false
+                return False # if there are no current opening brackets in the stack, we simply return false
             
             else:
                 popped = stack.pop() 
