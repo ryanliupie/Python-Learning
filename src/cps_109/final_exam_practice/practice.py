@@ -1,11 +1,23 @@
-n = "32145dfbhge467fgdhj"
+def isPalindrome(s): 
+    l = 0 
+    r = len(s) - 1 
 
-list1 = []
-for char in n:
-    if char.isalpha(): 
-        list1.append(char)        
+    while (l < r): 
+        while (l < r) and not s[l].isalnum(): 
+            l += 1 
+        while (l < r) and not s[r].isalnum(): 
+            r -= 1 
         
-r = "".join(list1)
+        if s[l].lower() != s[r].lower(): 
+            return False
+        
+        else: 
+            l += 1 
+            r -= 1 
+    
+    return True
 
-print(r)
+
+
+print(isPalindrome("Was it a car or a cat I saw?"))
         
