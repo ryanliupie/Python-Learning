@@ -1,5 +1,18 @@
-list1 = ["243234 2344324 23443 23145453"]
+def stock(prices): 
+    max_profit = 0 
+    buy = prices[0]
 
-list2 = list1[0].split(" ")
+    for price in prices: 
+        if price < buy: 
+            buy = price 
+        else: 
+            price_today = price - buy
+            if price_today > max_profit: 
+                max_profit = price_today
+    
+    return max_profit
 
-print(list2)
+
+
+
+print(stock([7, 1, 5, 3, 6, 4]))
