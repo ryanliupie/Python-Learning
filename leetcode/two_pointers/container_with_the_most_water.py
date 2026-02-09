@@ -19,7 +19,7 @@ print(maxArea([1,7,2,5,4,7,3,6]))
 
 '''e.g.
 
-1. interation 
+1. iteration 
 
 l = 0, r = 7
 
