@@ -1,6 +1,5 @@
 # Given a list of login attempts, count how many login attempts each ip address has.
 # Print all IP addresses that have 3 or more failed attempts 
-# Return them as a list 
 
 login_attempts = [
     {"username": "ryan",    "ip_address": "192.168.1.10",  "success": False},
@@ -83,7 +82,6 @@ for attempt in login_attempts:
 
         new_dict[ip] = new_dict.get(ip, 0) + 1 
 
-
 suspicious_ips = []
 for key, value in new_dict.items():  # suspicious_ips = [ip for ip, count in new_dict.items() if count >= 3]
     if value >= 3: 
@@ -92,14 +90,3 @@ for key, value in new_dict.items():  # suspicious_ips = [ip for ip, count in new
 print("Suspicious IP Addresses:\n")
 for ip in suspicious_ips: 
     print(ip)
-
-
-
-        
-
-
-
-
-
-        
-
