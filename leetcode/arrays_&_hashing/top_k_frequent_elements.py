@@ -2,7 +2,7 @@ def topKFrequent(nums, k):
     hashmap = {}
 
     for num in nums: 
-        hashmap[num] = hashmap.get(num, 0) + 1 # {1: 1: 2: 3, 3: 3}
+        hashmap[num] = hashmap.get(num, 0) + 1 # {1: 1, 2: 3, 3: 3}
 
     reversed_dict = {}
     for key, value in hashmap.items(): 
