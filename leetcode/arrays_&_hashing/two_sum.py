@@ -8,7 +8,7 @@ def twoSum(nums, target):
 
 # we find the complement 
 # 7 - 3 = 4. is 4 in dict1? no, we add so dict1[num] = i so {3:0}, note i is the index
-# 7 - 5 = 2. is 2 in dict1? no, we add so {5:0}
+# 7 - 5 = 2. is 2 in dict1? no, we add so {5:1}
 # 7 - 4 = 3.  is 3 in dict11? YES!
 
 # we then return[dict1[target-num], i]
