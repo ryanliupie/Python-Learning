@@ -1,4 +1,4 @@
-def topKFrequent(nums):
+def topKFrequent(nums, k):
     hashmap = {}
 
     for num in nums: 
@@ -18,6 +18,7 @@ def topKFrequent(nums):
             result.append(num)
             if len(result) == k: 
                 return result 
-print(topKFrequent([1,2,2,3,3,3]))
+            
+print(topKFrequent([1,2,2,3,3,3], 2))
  
 # bucket sort is probably the best way to solve this problem though
