@@ -1,6 +1,6 @@
-### Sliding Window
+## Sliding Window
 
-This technique is used when you are given an array or string and you are working with a contiguous subarray / substring (e.g., [2, 3, 4] from [1, 2, 3, 4], elements are in their original order and there is no skipping elements). 
+This algorithmic technique is used when you are given an array or string and you are working with a contiguous subarray / substring (e.g., [2, 3, 4] from [1, 2, 3, 4], elements are in their <b>original order</b> and there is no skipping elements). 
 
 That subarray is either one of two things: 
 
