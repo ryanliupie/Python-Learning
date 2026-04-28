@@ -7,7 +7,7 @@ def maxProfit(prices):
     max_profit = 0
     buy = prices[0]
     for price in prices:
-        if price < buy: 
+        if price < buy: # we are trying to look for the smallest price so we can buy it, so we must set it. 
             buy = price
         else: 
             profit_today = price - buy 
