@@ -16,7 +16,7 @@
 
 #----------------------------------------------------------------
 
-# the @property decorator allows me to call the fuction "email" like an attribute with only one bracket
+# the @property decorator allows me to call the function "email" like an attribute with only one bracket
 
 class Employee:
     def __init__(self, first, last):

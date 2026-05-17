@@ -1,4 +1,4 @@
-# Class methods are not tied to indivdual objects, but it is tied to the class itself. You use it to change something that applies to all objects of that class.
+# Class methods are not tied to individual objects, but it is tied to the class itself. You use it to change something that applies to all objects of that class.
 
 class Employee:
     num_of_employees = 0 
@@ -18,7 +18,7 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt) 
     
-    @classmethod # class method (decorator) to change the class variable of raise_amt. Recieves class of first argument rather the instance "self" where "self" represents the object or instance
+    @classmethod # class method (decorator) to change the class variable of raise_amt. Receives class of first argument rather the instance "self" where "self" represents the object or instance
     def set_raise_amt(cls, amount): # use "cls" to refer to class itself, not an instance
         cls.raise_amt = amount
 
@@ -79,5 +79,3 @@ print(Employee.is_workday(my_date))
 
 # "if the weekday is saturday(5) or sunday(6) return false because this is not a workday. If it is a weekday(0-4) then return true"
 # "well today is february 28th 2025 on a friday, so this is true since we are working today"
-
-
