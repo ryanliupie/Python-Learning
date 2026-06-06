@@ -1,0 +1,20 @@
+# Python 
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+.eggs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Secrets
+*.pem
+*.key
+secrets.py
+config.py
+.env*
