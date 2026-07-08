@@ -30,8 +30,3 @@ class LinkedList:
             node.prev.next = node.next
         else: 
             self.head = node.next # now if the head is 10 and we want to delete it, it moves forward, so 20 ⇄ 30 
-
-
-
-
-
